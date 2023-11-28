@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael Higgins | Instacart</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Michael Higgins</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="AboutMe.html">About Me</a></li>
+							<li class="active"><a href="Portfolio.html">Portfolio</a></li>
+                            <li><a href="CV Michael Higgins.pdf" target="_blank" class="">CV</li>
+						</ul>
+						<ul class="icons">
+                            <li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Instacart:<br>
+										Ecommerce App</h1>
+								</header>
+								<hr />
+								<!-- Text stuff -->
+									<h2>Overview</h2>
+									<p></p>
+									<h3>Motivation</h3>
+									    <p>
+                                        Instacart is an online grocery store that operates through an app. Instacart already has very good sales, but they
+                                        want to uncover more information about their sales patterns. Their marketing and finance teams want 
+                                        an exploratory analysis of some of their data in order to derive insights and suggest strategies for better segmentation.
+                                        </p>
+									
+									<h3>Objective</h3>
+									The Instacart marketing and Finance teams have provided some key questions that they want answered, 
+                                    and recommendations made based on the derived insights:
+										<ol>
+											<li>What are the busiest days of the week and hours of the day?</li>
+											<li>Are there particular times of the day when people spend more money?</li>
+											<li>What is the distribution among users in regards to their brand loyalty?</li>
+											<li>Are there certain types of products that are more popular than others?</li>											
+										</ol>
+                                    <hr />
+									
+									<div class="row">
+										<div class="col-6 col-12-small">
+										<h2>TOOLS</h2>
+                                        <center>
+                                            <img src="logos resized/python.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+                                            <img src="logos resized/numpy.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+                                            <img src="logos resized/pandas.png" alt="" /><br>
+                                            <em>Python, NumPy, Pandas</em><br>
+                                            <img src="logos resized/seaborn.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+                                            <img src="logos resized/matplotlib.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+                                            <img src="logos resized/anaconda.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+                                            <img src="logos resized/Jupyter.png" alt="" /><br>
+                                            <em>Seaborn, MatPlotLib, Anaconda, Jupyter</em>
+                                        </center>
+										</div>
+                                        
+										<div class="col-6 col-12-small">
+										<h2>SKILLS</h2>
+											<ul class="alt">
+												<li>Data cleaning and consistency</li>
+                                                <li>Data wrangling and subsetting</li>
+                                                <li>Variable derivation</li>
+                                                <li>Data visualisation with Python</li>
+											</ul>	
+										</div>
+									</div>
+									<hr />
+									
+									<h2>Process</h2>
+                                    <h3>Consistency Checks</h3>
+                                    <div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Dataset</th>
+													<th>Missing Values</th>
+													<th>Missing Values Treatment</th>
+                                                    <th>Duplicates</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Orders</td>
+													<td>16 NULL values found in product_name column</td>
+													<td>Records removed</td>
+                                                    <td>5 duplicate rows removed</td>
+												</tr>
+												<tr>
+													<td>Products</td>
+													<td>206,209 NULL values<br>in days_since_prior_order column</td>
+                                                    <td>Keep NULL values.<br>Create new column to flag user's first order</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>Orders_products_prior</td>
+													<td>No missing values</td>
+													<td></td>
+                                                    <td>No duplicates</td>
+												</tr>
+												<tr>
+													<td>Customers</td>
+													<td>No missing values</td>
+                                                    <td></td>
+													<td>No duplicates</td>
+												</tr>
+												<tr>
+													<td>States</td>
+													<td>No missing values</td>
+                                                    <td></td>
+													<td>No duplicates</td>
+												</tr>
+                                                <tr>
+													<td>Departments</td>
+													<td>No missing values</td>
+                                                    <td></td>
+													<td>No duplicates</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                    <h3>Deriving Columns</h3>
+                                    <h4>Price Ranges</h4>
+                                    <p>
+                                        The priceing data constained continuous daat over a large range. These were catagorised into three groups:
+                                        <ol>
+                                            <li><em>High-Range</em>: Greater then $15</li>
+                                            <li><em>Mid-Range</em>: Greater that $5 and less than $15</li>
+                                            <li><em>Low-Range</em>: Less than or equal to $5</li>
+                                        </ol>
+                                    </p>
+                                    <img src="images/instacart_prodranges.png" alt="" class="image fit" />
+                                    <h4>Region</h4>
+                                    <p>
+                                        In order to get a clear picture of Instacart's national sales by region the customers' State information 
+                                        was used to place them into one of four <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf" target="_blank">Census Bureau regions</a>. 
+                                        The code creates an array, <em>Regions</em>, containing a vector for each of the four regions required. 
+                                        A <code>for</code> loop is used to cycle through the regions and apply the correct derived variable based on the value of the <code>customer_state</code> 
+                                        variable.
+                                    </p>
+                                    <img src="images/instacart_regions.png" alt="" class="image fit" />
+
+                                    <h3>Dataflow</h3>
+                                    The data provided by Instacart was imported to Pandas and dataframes merged on common variables. 
+                                    The population flow shows how the merging was ordered, and the number of records in the susequent dataframes created.
+                                    <img src="images/Instcart_popflow.png" alt="" class="image fit" />
+                                    <hr>
+                                    
+                                    <h2>Visualisations and Recommendations:</h2>
+                                        The following are abridged notes on the insights and recommendations made. The full recommendations are available at the foot of the page.
+                                        <p>
+                                            <h3>Average Total orders by Weekday</h3>
+                                            <span class="image left"><img src="images/instacart_daily orders.png" alt="" /></span>
+                                            <strong>Insight</strong>: Sales peak on Saturday and are at their lowest on Wednesday. 
+                                                The sales follow a consistent trend where the Saturday (0) peak slowly falls until Wednesday (3), where it begins to rise again. 
+                                                Weekend sale have a significantly larger volume of sales than the weekday sales.<br>
+                                            <strong>Recommendation</strong>: Prioritise directed advertising on weekends by emailing customers on Friday afternoon/evenings and on Satudays with promotional materials.
+                                        </p>
+                                        <p>
+                                            <h3>Average Purchase Price by Hour of the Day</h3>
+                                            <span class="image left"><img src="images/instacart_hourly avg prices.png" alt="" /></span>
+                                            <strong>Insight</strong>: The hourly expedature graph shows that the average price of sales in highest between 02:00 and 04:00, peaking at $18. Sales are a consistent £12 at other times<br>
+                                            <strong>Recommendation</strong>: On the sales portals give precidence to high value items from 02:00 to 04:00. Ensure that these items are the main focus of the homepage when customers log in.
+                                        </p><br class="blank" />
+                                        <p>
+                                            <h3>Frequency of Purchasing by Customer Loyalty</h3>
+                                            <span class="image left"><img src="images/instacart loyalty and freq.png" alt="" /></span>
+                                            <strong>Insight</strong>: When comparing the reguarity of spending by New Customers and the Regular (established) Customers the difference is that New Customers are mainly Non-Frequent customers (50%).<br>
+                                            <strong>Recommendation</strong>: Encourage the New Customers (totaling over 6 million) to become Regular Customers by giving insentive to order more frequently.<br>
+                                            To make regular purchasing easier try introducing schemes such as:
+                                            <li>Easy recurring delivery slots of common staple items</li>
+                                            <li>Introduction of loyalty rewards</li>
+                                            <li>Reduction on delivery costs for regular use</li>
+                                        </p>
+                                        
+                                    <hr />
+
+									<center><h2>Full Project</h2></center>
+										<ul class="actions fit">
+											<li><a href="InstacartReport.pdf" target="_blank"  class="button">Report</a></li>
+											<li><a href="https://github.com/MDHigg/Instacart_Python"  target="_blank" class="button">GitHub</a></li>
+										</ul>
+
+									<hr />
+
+								<!-- Blockquote -->
+									<ul class="actions fit">
+										<li><a href="Portfolio.html" class="button primary">Portfolio Projects</a></li>
+									</ul>
+								</section>
+				</div>					
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<section class="alt">
+							<h2>Eduction</h2>									
+							<strong>CAREER FOUNDRY BOOTCAMP</strong><br />
+							Data Analytics<br />
+							<strong>IMPERIAL COLLEGE, LONDON</strong><br />
+							Electrical and Electronic Engineering<br />
+							Masters in Engineering (Hons)<br />
+							Dissertation: Artificial Intelligence using Verilog HDL
+						</section>
+					</section>
+					<section class="alt">
+						<section>
+							<h3>Email</h3>
+							<p><a href=mailto:“MHigginsAnalytics”?subject=Portfolio%20Enquiry%20>MHigginsAnalytics@gmail.com</a></p>
+							<h3>Visualisations</h3>
+							<p><a href="https://public.tableau.com/app/profile/michael.higgins7794/vizzes"<span class="label">Find me on Tableau</span></a></p>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->									
+								<li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+							</ul>
+							
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

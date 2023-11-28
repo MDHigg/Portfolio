@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael Higgins | GameCo Marketing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="Portfolio.html" class="logo">Michael Higgins</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="AboutMe.html">About Me</a></li>
+							<li class="active"><a href="Portfolio.html">Portfolio</a></li>
+                            <li><a href="CV Michael Higgins.pdf" target="_blank" class="">CV</li>
+						</ul>
+						<ul class="icons">
+                            <li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+						
+							<section class="post">
+								<header class="major">
+									<h1>GameCo</h1>
+								</header>
+										<center><h2>Video Game Marketing</h2></center>
+								<hr />
+								<!-- Text stuff -->
+									<h2>Motivation</h2>
+									    <p>
+                                        GameCo, wants to determine how to distribut their marketing budget for the upcoming year.
+                                        A descriptive analysis of a video game data set is required to foster a
+                                        better understanding of how GameCo’s new games might fare in the market, and where they should focus 
+                                        in order to maximise potential sales.
+									    </p>
+                                    <h2>Objective</h2>
+                                    <p>The focus of these asnalyses will be to answer the following key questions to best determine the marketplaces 
+                                        that have the highest potential profits and the types of games that are likely to be successful:
+										<ol>
+											<li>How are regional sales changing?</li>
+											<li>What genres were most successful in 2016?</li>
+											<li>Which platforms are going to be big in 2017?</li>
+											<li>Who are the main competitors?</li>
+                                        </ol>
+                                    </p>
+									<hr />
+									<div class="row">
+										<div class="col-6 col-12-small">
+
+											<h2>TOOLS</h2>
+											<center>
+												<img src="logos resized/excel.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+												<img src="logos resized/powerpoint.png" alt="" /><br>
+												<em>Excel, PowerPoint</em><br>
+											</center>
+
+										</div>
+										
+										<div class="col-6 col-12-small">
+
+											<h2>SKILLS</h2>
+											<ul class="alt">
+												<li>Data Cleaning</li>
+                                                <li>Data Understanding</li>
+												<li>Statistical Analysis</li>
+												<li>Visualisations and Presentation</li>		
+											</ul>
+										</div>
+									</div>
+									<hr>
+
+									<h2>Data</h2>
+                                    Sales figures for video games from 1980 to 2016 were courced from 
+                                        <a href="https://images.careerfoundry.com/public/courses/intro-to-data/E2/vgsales.xlsx"  class="">VGChartz Video Game Sales</a>.
+									The methodology for the collection of these data can be found 
+									<a href="https://www.vgchartz.com/methodology.php"  class="">here</a>.
+									
+
+									<hr/>									
+										
+										<h2>Data Processing</h2>                                        
+										<h3>Duplicates and Consistency</h3>
+										<ul>
+                                            <li>Three duplicate values were found and removed</li>
+                                            <li>Pokemon was recorded under several names (<em>Pokemon, Pokémon</em> and <em>Pok√©mon</em>). These were all changes to <em>Pokemon</em>.
+                                        </ul>
+										
+										<h4>Completeness</h4>
+                                        The following variables had missing values, any action take is recorded and reported to stakeholders to ensure 
+                                        transparency and enure that potential errors or biases are :
+                                        <div class="table-wrapper">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Variable</th>
+                                                        <th>Missing Elements</th>
+                                                        <th>Action Taken</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Genre</td>
+                                                        <td>1</td>
+                                                        <td>Genre was found on the VGChartz website (<a href="https://www.vgchartz.com/game/45934/trick-x-logic-season-2/" target="_blank" class="">Adventure</a>)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Name</td>
+                                                        <td>16</td>
+                                                        <td>Deleted, these records contained were found to have no sales information.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Platform</td>
+                                                        <td>21</td>
+                                                        <td>None; sales and year information is present, these will be useful to aspects of analysis.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Publisher</td>
+                                                        <td>18</td>
+                                                        <td>None; sales and year information is present, these will be useful to aspects of analysis.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Year</td>
+                                                        <td>270</td>
+                                                        <td>None; their sales will be relevant to total sales.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                                                                
+										<h2>Analysis Extract: Regional Sales Volume</h2>
+                                        <a id="analysis_extract"></a>
+                                        <h3>Temporal Analysis of Regional Sales</h3>
+                                        <p><span class="image left"><img src="images/regional_sales.png" alt="" /></span>
+                                            The visualisation to best display regional sales trends was determined to be a 
+                                            line graph, with the proportion of annual sales rather than absolute. This made each year 
+                                            comprable to the others, as the total sales volume annually was inconsistent.<br>
+                                            Sales prior to 2007 were excluded as they did not reflect current buying trends.<br>
+                                            The data chosen, and the method of presentation gives a clear indication to the marketing team 
+                                            about the future dominance of Europe over North America as the centre of video game purchasing.
+                                        </p>                                        
+                                        <h3>Comparing Genre Sales by Region</h3>
+                                        <p><span class="image left"><img src="images/genre_sales.png" alt="" /></span>
+                                            Genre sales was shown for the most recent year, in absolute terms. Giving context to the 
+                                            relative sales by genre to allow GameCo to understand which types of games were the best investment.<br>
+                                            The stacked bar allowes the stakeholders to understand how best to divide their budget across the three largest 
+                                            market regions once the genres of game they are maketing is known.
+                                        </p>
+									<hr/>
+
+									<h2>Recommendations</h2>
+                                    <ol>
+                                        <li>Europe is now the largest market and growing. GameCo must increase marketing in Europe to capitalise.</li>
+                                        <li>North American is still the second largest market, but it is continuing to decrease its marketshare. 
+                                            Marketing should regularly review the need and effectiveness of North American marketing strategies.</li>
+                                        <li>Action and Shooter games are most popular worldwide, strong investment in these genres will have 
+                                            global reach due to their international appeal.</li>
+                                    </ol>
+
+                                    <hr />
+									<center><h2>Full Project</h2></center>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+										<div class="col-4"></div>
+										<div class="col-4"><ul class="actions fit">
+											<li><a href="GameCoPresentation.html"  class="button">Presentation</a></li>
+										</ul></div>
+										<div class="col-4"></div>
+										</div>
+									</div>
+
+									<hr />
+
+								<!-- Blockquote -->
+									<ul class="actions fit">
+										<li><a href="Portfolio.html" class="button primary">Portfolio Projects</a></li>
+									</ul>
+								</section>
+								</div>					
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<section class="alt">
+							<h2>Eduction</h2>									
+							<strong>CAREER FOUNDRY BOOTCAMP</strong><br />
+							Data Analytics<br />
+							<strong>IMPERIAL COLLEGE, LONDON</strong><br />
+							Electrical and Electronic Engineering<br />
+							Masters in Engineering (Hons)<br />
+							Dissertation: Artificial Intelligence using Verilog HDL
+						</section>
+					</section>
+					<section class="alt">
+						<section>
+							<h3>Email</h3>
+							<p><a href=mailto:“MHigginsAnalytics”?subject=Portfolio%20Enquiry%20>MHigginsAnalytics@gmail.com</a></p>
+							<h3>Visualisations</h3>
+							<p><a href="https://public.tableau.com/app/profile/michael.higgins7794/vizzes"<span class="label">Find me on Tableau</span></a></p>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->									
+								<li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+							</ul>
+							
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

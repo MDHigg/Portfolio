@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael Higgins | Influenza</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="Portfolio.html" class="logo">Michael Higgins</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="AboutMe.html">About Me</a></li>
+							<li class="active"><a href="Portfolio.html">Portfolio</a></li>
+                            <li><a href="CV Michael Higgins.pdf" target="_blank" class="">CV</li>
+						</ul>
+						<ul class="icons">
+                            <li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+									<header class="major">
+										<h1>Influenza Epidemiology</h1>
+									</header>
+										<center><h2>Locum Staffing Strategy</h2></center>
+								<hr />
+								<!-- Text stuff -->
+									<h2>Overview</h2>
+									<h3>Motivation</h3>
+									<p>The United States has an influenza season where more people than usual
+                                        suffer from the flu. Some people, particularly those in vulnerable populations, develop serious
+                                        complications and end up in the hospital. Hospitals and clinics need additional staff to
+                                        adequately treat these extra patients. The medical staffing agency provides this temporary
+                                        staff.</p>
+									
+									<h3>Objective</h3>
+									<p>Determine when to send staff, and how many, to each state. 
+                                    The agency covers all hospitals in each of the 50 states of the United States plus Washinton D.C., and
+                                    the project will plan for the upcoming influenza season.
+									</p>	
+									<hr />
+
+									<div class="row">
+										<div class="col-6 col-12-small">
+
+											<div class="col-6 col-12-small">
+												<h2>TOOLS</h2>
+													<center>
+														<img src="logos resized/excel.png" alt="" />&nbsp; &nbsp; &nbsp; &nbsp;
+														<img src="logos resized/tableau.png" alt="" /><br>
+														<em>Excel, Tableau</em><br>
+														<img src="logos resized/loom.png" alt="" /><br>
+														<em>Loom</em>
+													</center>
+												</div>
+
+										</div>
+										
+										<div class="col-6 col-12-small">
+
+											<h2>SKILLS</h2>
+											<ul class="alt">
+												<li>Data Cleaning, Profiling and Transformation</li>
+												<li>Statistical Analysis</li>
+												<li>Hypothesis Testing</li>
+												<li>Visualisations and Presentation</li>		
+											</ul>
+										</div>
+									</div>
+								
+									<h2>Data</h2>
+                                    The following dataset were sourced, and then profiled and cleaned in order to conduct the analysis:
+                                        <li><a href="https://coach-courses-us.s3.amazonaws.com/public/courses/da_program/CDC_Influenza_Deaths_edited.xlsx"  class="">Influenza deaths</a></li>
+										<li><a href="https://coach-courses-us.s3.amazonaws.com/public/courses/data-immersion/A1-A2_Influenza_Project/Census_Population_transformed_202101.csv"  class="">Population data</a></li>
+										<li><a href="https://images.careerfoundry.com/public/courses/data-immersion/A1-A2_Influenza_Project/CDC_Lab_Tests.xlsx"  target="_blank" class="">Laboratory test results</a></li>
+                                        <li><a href="https://images.careerfoundry.com/public/courses/data-immersion/A1-A2_Influenza_Project/CDC_Influenza_Visits.xlsx"  target="_blank" class="">Visits to medical providers</a></li>
+                                        <li><a href="https://images.careerfoundry.com/public/courses/data-immersion/A1-A2_Influenza_Project/NIS_Flu_Shot_Survey_reduced.xlsx"  target="_blank" class="">Vaccinations in children</a></li>                                   
+										
+									<hr/>									
+										
+										<h2>Data Processing</h2>
+                                        
+										<h3>Cleaning</h3>
+										<h4>Duplicates</h4>
+										<p>The influenza deaths data contained the number of deaths with influenza recorded as the 
+										primary cause of death in each US county from 2009 to 2017. Therfore there 
+										should be one entry for each county in each year. Running a remove duplicates search 
+										on these two variables produced 3,278 duplicates with 25,707 unique values.</p>
+										
+										<h4>Consistency and Completeness</h4>
+										<strong>Census Data:</strong>
+										<span class="image fit"><img src="images/census_cleaning.png" alt="" /></span>
+
+										<strong>Influenza Deaths Data:</strong>
+										<span class="image fit"><img src="images/deaths_cleaning.png" alt="" /></span>
+										
+										<h3>Integration</h3>
+										<p>In order to integrate the two data set common variables were required:<br>
+											<ul>
+											<li>The state and year data match in both data and format. These data were ready for integration without alteration.</li>
+											<li>Both have age groupings, but the deaths data has the Age Groups in 10-year ranges, whereas the Census is in 5-year ranges.</li>
+											</ul>
+										<strong>Challenges:</strong><br>
+										To integrate the data a consistent set of age range groups were required. 
+										In order to  do this the 5-year ranges in the Census were summed to form the equivalent 10-year ranges to the Deaths data.<br>
+										Furthermore, the Census dataset does not follow <em>tidy data</em> principles, with the Age Group variable 
+										being split over numerous columns, therefore a simple <code>VLOOKUP</code> will not be sufficient to integrate and create 
+										a integrated dataset that conforms to <em>Tidy Data</em> priciples.										
+										The final formula used to integrate the data was a 2D <code>INDEX MATCH</code>, which used the Census array as the index, and 
+										added the relevant values to the Deaths dataset as a new variable.
+										
+                                    <hr/>
+										<h2>Analysis</h2>
+										<p><h3>Statistical Analysis</h3>
+										<span class="image right"><a href="images/mean_distribution.png" target="_blank">
+											<img src="images/mean_distribution.png" alt="Figure: Values of average and spread." /></a>
+											<figcaption>Fig.1, <em>click to enlarge</em>.</figcaption>
+										</span>
+										In order to normalise the data the number of <strong>Deaths per 100,000 Population</strong> in the 65-and-over age groups for each state 
+										in 2017 was produced in a pivot table with a slicer. This was then analysed for averages and variance, and then the number of 
+										outlying states was found using these results, <em>see Fig. 1</em>.
+										<br>
+										The correlation between the number of Deaths per 100,000 population was compared to the normalised states' populations in the 
+										year 2017. To normalise the states' population the state population was divided by the national population. By normalising both 
+										death and population data the information was then of comparable magnitudes.<br>
+										The correlation coefficient was calculated at <strong>-0.21</strong>. From this we can infer that the mortality rate is negatively impacted by the 
+										population of the State. 
+										A possible reasons for this could be that there is a lower access to healthcare in less populous regions.
+										</p>
+										<p><h3>Hypothesis Testing</h3>
+											<span class="image right"><img src="images/influenza hypTest.png" alt="" /></span>
+											<strong>Null Hypothesis:</strong>
+											A person aged 65 or over has an equal or lower probability of death from influenza than that of someone under 65.<br>
+											<strong>Alternative Hypothesis:</strong>
+											A person aged 65 or over has a higher probability of death from influenza than that of someone under 65.<br>
+											<strong>Hypothesis Testing:</strong>
+											The t-Test run in Excel on the mortality rates (deaths per 100,000) for those under-65 against perople aged 65-and-over 
+											produced a t Stat of -15.5. Meaning that the age variable is of high significance to the differences in mortality rate. 
+											And this was shown to have over 95% confidence, therefore the <em>Null Hypothesis</em> could be rejected. And, therefore 
+											age as deciciding factor for the level of medical staffing is a key consideration.
+										</p>
+									<hr/>
+
+										<h2>Recommendations</h2>
+										<p>The following these processes a series of visualisations were created to determine insights. The final recommendations were used to generate an interactive 
+										map, that shows the details and needs of individual states, along with a commentry and conclusion to the analysis conducted.</p>
+										<center>
+										<div class='tableauPlaceholder' id='viz1700952184965' style='position: relative'>											
+											<noscript><a href='#'><img alt='Page 5 Conclusions and recommendations ' 
+												src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StatesNeedsMapbyMichaelHiggins&#47;Page5Conclusionsandrecommendations&#47;1_rss.png' 
+												style='border: none' /></a></noscript>
+												<object class='tableauViz'  style='display:none;'>
+													<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+													<param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+													<param name='name' value='StatesNeedsMapbyMichaelHiggins&#47;Page5Conclusionsandrecommendations' />
+													<param name='tabs' value='no' /><param name='toolbar' value='yes' />
+													<param name='static_image' 
+													value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StatesNeedsMapbyMichaelHiggins&#47;Page5Conclusionsandrecommendations&#47;1.png' /> 
+													<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+													<param name='display_spinner' value='yes' />
+													<param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+													<param name='language' value='en-GB' /></object></div>                
+													<script type='text/javascript'>                    
+													var divElement = document.getElementById('viz1700952184965');                    
+													var vizElement = divElement.getElementsByTagName('object')[0];                    
+													if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1200px';vizElement.style.height='777px';} 
+													else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1200px';vizElement.style.height='777px';} 
+													else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+													var scriptElement = document.createElement('script');                    
+													scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+													vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+													</script>
+											</center>
+                                    <hr />
+									<center><h2>Full Project</h2></center>
+										<ul class="actions fit">
+											<li><a href="Influenza Video.html"  class="button">Video Presentation</a></li>
+											<li><a href="InfluenzaTableau.html"  class="button">Dashboard</a></li>
+											<li><a href="Influenza Mortality Interim Report.pdf"  target="_blank" class="button">Interim Report</a></li>
+										</ul>
+									<hr />
+
+								<!-- Blockquote -->
+									<ul class="actions fit">
+										<li><a href="Portfolio.html" class="button primary">Portfolio Projects</a></li>
+									</ul>
+								</section>
+				</div>					
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<section class="alt">
+							<h2>Eduction</h2>									
+							<strong>CAREER FOUNDRY BOOTCAMP</strong><br />
+							Data Analytics<br />
+							<strong>IMPERIAL COLLEGE, LONDON</strong><br />
+							Electrical and Electronic Engineering<br />
+							Masters in Engineering (Hons)<br />
+							Dissertation: Artificial Intelligence using Verilog HDL
+						</section>
+					</section>
+					<section class="alt">
+						<section>
+							<h3>Email</h3>
+							<p><a href=mailto:“MHigginsAnalytics”?subject=Portfolio%20Enquiry%20>MHigginsAnalytics@gmail.com</a></p>
+							<h3>Visualisations</h3>
+							<p><a href="https://public.tableau.com/app/profile/michael.higgins7794/vizzes"<span class="label">Find me on Tableau</span></a></p>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->									
+								<li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+							</ul>
+							
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
