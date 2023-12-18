@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Michael Higgins | Education and Poverty</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="Portfolio.html" class="logo">Michael Higgins</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="AboutMe.html">About Me</a></li>
+							<li class="active"><a href="Portfolio.html">Portfolio</a></li>
+                            <li><a href="CV Michael Higgins.pdf" target="_blank" class="">CV</li>
+						</ul>
+						<ul class="icons">
+                            <li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Post -->
+							<section class="post">
+									<header class="major">
+										<h1>Education and Poverty</h1>
+									</header>
+										<center><h2>Does Access to Education Reduce Poverty?</h2></center>
+								<hr>
+								<!-- Text stuff -->
+									<h2>Overview</h2>
+									<h3>Motivation</h3>
+									<p>According to The World Bank, education is one of the strongest instruments of reducing poverty, delivering 
+                                        large returns in terms of income (<a href="https://www.worldbank.org/en/topic/education/overview#:~:text=By%202030%2C%20our%20target%20is,blocks%20for%20all%20other%20learning.">source</a>). 
+                                        The link between high education levels and low levels of poverty are well established, but is this correlation without causation? Or is the 
+                                        reduction in poverty the cause that allows a higher number of young people to be educated to a higher level that their predecessors?
+                                        </p>
+									
+									<h3>Objective</h3>
+									<p>To determine if increasing education enrolment is cause of lowering poverty levels. And if so, in what time frame does the change in 
+                                        education rates decrease the poverty levels of a nation, and what levels of education have the highest impact on decreasing the proportion 
+                                        of people living in poverty.
+									</p>
+									<hr />
+
+									<div class="row">
+										<div class="col-6 col-12-small">
+
+											<div class="col-6 col-12-small">
+												<h2>TOOLS</h2>
+													<center>
+														<img src="logos resized/python.png" alt="" />&nbsp; &nbsp;
+                                                        <img src="logos resized/seaborn.png" alt="" />&nbsp; &nbsp;
+                                                        <img src="logos resized/matplotlib.png" alt="" />&nbsp; &nbsp;
+                                                        <img src="logos resized/numpy.png" alt="" />
+                                                        <br>
+                                                        <em>Python, Seaborn, MatPlotLib, NumPy</em>
+                                                        <br>
+                                                        <img src="logos resized/folium.png" alt="" />
+														<img src="logos resized/scikit.png" alt="" />&nbsp; &nbsp;
+														<img src="logos resized/Jupyter.png" alt="" />&nbsp; &nbsp;
+														<img src="logos resized/tableau.png" alt="" />
+                                                        <br>
+														<em>Folium, SciKit, Jupyter, Tableau</em>
+                                                        <br>
+													</center>
+												</div>
+
+										</div>
+										
+										<div class="col-6 col-12-small">
+
+											<h2>SKILLS</h2>
+											<ul class="alt">
+												<li>Data Sourcing</li>
+                                                <li>Data Cleaning, Profiling and Transformation</li>
+												<li>Hypothesis Creating and Testing</li>
+                                                <li>Statistical Analysis</li>
+												<li>Machine Learning</li>
+												<li>Visualisations and Presentation</li>		
+											</ul>
+										</div>
+									</div>
+									<hr>
+									<h2>Data Sourcing</h2>
+									The World Bank collates a variety of metrics provided by its member nations, and uses these data to further 
+									accurately estimate other metrics. All these data are provided for public use in accordance with the World Bank's 
+									<a href="https://datacatalog.worldbank.org/public-licenses" target ="_blank">Public License</a>, and are used in accordance with the cited 
+									<a href="https://creativecommons.org/licenses/by/4.0/" target ="_blank">Creavitve Commons License</a>. The following data 
+									were used from The World Bank's data catalouge:
+										<li><a href="https://data.worldbank.org/topic/economy-and-growth?view=chart" target ="_blank">Economy and Growth</a></li>
+										<li><a href="https://data.worldbank.org/topic/education?view=chart" target ="_blank">Education</a></li>
+										<li><a href="https://data.worldbank.org/topic/poverty?view=chart" target ="_blank">Poverty</a></li>
+									The data are provided with covering all metrics from 1960 to 2022 where available, and include metadata on how the 
+									information was sourced or generated by The World Bank.<br>
+									Data regarding the value and distribution of International Aid for education was sourced from the 
+									Organisation for Economic Co-operation and Development's 
+									<a href="https://stats.oecd.org/qwids/" target ="_blank">Query Wizard for Development Statistics</a>.
+									<hr>
+
+									<h2>Data Cleaning</h2>
+									<h3> Missing Data</h3>
+									<em><a href="https://github.com/MDHigg/global-Poverty-and-Education/blob/main/00%20Scripts/01.01%20Data%20Cleaning%20Economic%20Dataset.ipynb" target ="_blank">Full Python code on GitHub</a></em><br>
+									<p>
+										The World Bank provides 254 indicators for the economic level and growth of nationn. On studying the metadata file provided 
+										four of these factors were potentially required to meet the aims o the study:
+										<li>GNI per capita growth (annual %)</li>
+										<li>GNI per capita (constant 2015 US dollars)</li>
+										<li>GDP per capita growth (annual %)</li>
+										<li>GDP per capita (constant 2015 US dollars)</li>
+									</p>
+									<p>	
+										<span class="image right">
+												<img src="images/economy missing data.png" alt="" />								
+										</span>
+										The data for each year (1960 to 2022) was reviewed to determine the number of missing data points. The level for 
+										data required was set at 30%, which equated to fewer than 319.2 entries in a given year. The data from 1996 was the first year to 
+										fall below this target of no more than 30% missing, 2022 also lacked enough data to have a dependable statistical basis for analysis. 
+										Therefore, the dataset was trimmed to include on the the years 1996 - 2021.
+										</code>
+									</p>
+									<p>
+										Once the years with significant data for analysis were identified the missing values were interpolated using the following Python code:<br>
+										<code>WB_econ_GDP_GNI_interpolated = WB_econ_GDP_GNI_interpolated.interpolate(method='linear', axis=1, inplace=False, limit_direction = 'both', limit_area=None)</code><br>
+										Data points between two known values are estimated using a linear trend. For data outside the range of known values 
+										the values are filled with either the last or next known value depending on if it is at the start of end of the range.
+									</p>
+									<p>
+										Finally, the data were organised to follow tidy data principles. The four indicators and the year were changed to individual 
+										variables. The images below show the layout of the data before and after the data tidying process:
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/econ untidy data.png" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/econ tidy data.png" alt="" /></span></div>
+											</div>
+										</div>
+									</p>
+									<hr>
+									<h2>Analysis</h2>
+									<h3>Correlation Heatmap</h3>
+									<p>	
+										<span class="image left"><img src="images/correl matrix.png" alt="" /></span>
+										A correlation matrix was produced to determine the relationships between national poverty measures at the 
+										three key rates, as set by The World Bank, and the enrolment rate of young people in school. this showed that there are strong 
+										negative correlations (blue) between the rate of enrolment and the rate of poverty. With the enrolment rate at the 
+										secondary school level having the strongest relationship (light blue) with the rates of poverty. Furthermore, 
+										all rates of education enrolment had the strongest relationship with the lowest poverty level (<em>US$2.15 per day, 2015 equivalent</em>). 
+										This means that the higher the rate of enrolment in education the lower the rate of poverty across a nation.
+									</p>
+									<h3>Geographic Analysis</h3>
+										<p>Maps of the spread of poverty and education enrolment were created using Folium, and an example is given below of the 
+										global poverty rates at fewer than $6.85 per day in 2015 are shown below. The full anaysis can be found at 
+										<a href="https://github.com/MDHigg/global-Poverty-and-Education/blob/main/00%20Scripts/5.01%20Geographic%20Visualization%20Folium.ipynb" target ="_blank">GitHub</a></em>.<br>
+										<center><embed src="images/poverty_plot2015.html" width="1000" height="500">
+										</embed></center>
+										</p>
+
+									<h3>Machine Learning: Clustering</h3>
+									<p>	<span class="image right">
+										<img src="images/elbow curve.png" alt="" />
+										</span>
+										Once correlation and location were determined, the Year, Poverty Rate, Primary Enrolment, and Secondary Enrolment Rates 
+										were compared and grouped into siliar types by clustering. Clustering looks to group the data into a given number of 
+										subtypes, such that fr any given number of groups all data is as colse as possible to the mean of its group. 
+										An <em>elbow test</em> was performed by comparing the data with a range from 1 to 9 clusters, and the <em>elbow</em> of the 
+										graph is the point at which there is a significant drop in the gradient (see right). The last observable change in gradient 
+										happens at k=3, implying that the data should be grouped into three clusters, and there is no advantage to having 
+										greater than three clusters.<br>
+									</p>
+									<p>	<span class="image left">
+										<img src="images/k_means clustering.png" alt="" />
+										</span>
+										Once the number of clusters is determined, the SciKit Python library is used to group the data. The scatter graph 
+										shows the Poverty and Secondary Enrolment Rates of all countries in 2015, coloured by their assigned cluster. There are very clear 
+										regions for each cluster, with limited overlaps between groups.
+									</p>
+									<hr>
+								<h2>Insights</h2>
+								<ul>
+								<li>Education and Poverty are linked to one another, with the countries that have the highest rate of poverty experienceing the 
+									lowest levels of educaiton enrolment.</li>
+								<li>The enrolment in secondary educaiton has a stronger link to the rate of poverty in a nation than primary education, 
+									implying that futhering education is an improtant factor.</li>
+								<li>There are broadly three groups of nations when comparing educaiton and poverty levels. This was explored in greater depth 
+									in the final analysis dashboards, and aligns with The World Bank's designation of countries as <em>high</em>, <em>middle</em>, or 
+									<em>low</em> income nations.</li>
+								</ul>
+								To see the full analysis and insights please view the data dashboard created in Tableau.
+
+								<hr>
+									<center><h2>Full Project</h2></center>
+										<ul class="actions fit">
+											<li><a href="EduPovTableau.html"  class="button">Dashboards</a></li>
+											<li><a href="https://github.com/MDHigg/global-Poverty-and-Education"  target="_blank" class="button">Github</a></li>
+										</ul>
+								<hr>
+								<!-- Blockquote -->
+									<ul class="actions fit">
+										<li><a href="Portfolio.html" class="button primary">Portfolio Projects</a></li>
+									</ul>
+								</section>
+				</div>					
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<section class="alt">
+							<h2>Eduction</h2>									
+							<strong>CAREER FOUNDRY BOOTCAMP</strong><br />
+							Data Analytics<br />
+							<strong>IMPERIAL COLLEGE, LONDON</strong><br />
+							Electrical and Electronic Engineering<br />
+							Masters in Engineering (Hons)<br />
+							Dissertation: Artificial Intelligence using Verilog HDL
+						</section>
+					</section>
+					<section class="alt">
+						<section>
+							<h3>Visualisations</h3>
+							<p><a href="https://public.tableau.com/app/profile/michael.higgins7794/vizzes"<span class="label">Find me on Tableau</span></a></p>
+							<h3>Social</h3>
+							<ul class="icons alt">									
+								<li><a href="https://github.com/MDHigg" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://linkedin.com" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+							</ul>
+							
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
